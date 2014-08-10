@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.21/angular.js" data-semver="1.2.21"></script>
+  <script data-require="lodash.js@*" data-semver="2.4.1" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl" class="container">
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Raw</h2>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>date</th>
+            <th>type</th>
+            <th>title</th>
+            <th>amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="row in raw">
+            <td>{{row.date}}</td>
+            <td>{{row.type}}</td>
+            <td>{{row.title}}</td>
+            <td>{{row.amount}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Grouped</h2>
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th width="100">date</th>
+            <th colspan="2">summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="row in parsed">
+            <td>
+              {{row.date}}
+              Net: {{row.calulateNet()|currency}}
+            </td>
+            <td>
+              <strong>Credits: </strong>
+              <ul>
+                <li ng-repeat="credit in row.credits">({{credit.date}}) {{credit.title}} - {{credit.amount|currency}}</li>
+              </ul>
+            </td>
+            <td>
+              <strong>Debits: </strong>
+              <ul>
+                <li ng-repeat="debit in row.debits">({{debit.date}}) {{debit.title}} - {{debit.amount|currency}}</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

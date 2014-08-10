@@ -1,0 +1,51 @@
+[{
+  "date": "8-14-2014",
+  "credits": [{
+    "date": "8-14-2014",
+    "type": "credit",
+    "title": "justin salary",
+    "amount": 1000.00,
+    "journalId": 1,
+    "sourceId": 1
+  }],
+  "debits": [{
+    "date": "8-15-2014",
+    "type": "debit",
+    "title": "electric",
+    "amount": 100.00,
+    "journalId": 2,
+    "sourceId": 2
+  }, {
+    "date": "8-14-2014",
+    "type": "debit",
+    "title": "american furniture",
+    "amount": 50.00,
+    "journalId": 4,
+    "sourceId": 3
+  }, {
+    "date": "8-17-2014",
+    "type": "debit",
+    "title": "home furnishings",
+    "amount": 150.00,
+    "journalId": 6,
+    "sourceId": 5
+  }]
+}, {
+  "date": "8-20-2014",
+  "credits": [{
+    "date": "8-20-2014",
+    "type": "credit",
+    "title": "chelsea salary",
+    "amount": 800.00,
+    "journalId": 5,
+    "sourceId": 4
+  }],
+  "debits": [{
+    "date": "9-15-2014",
+    "type": "debit",
+    "title": "electric",
+    "amount": 100.00,
+    "journalId": 3,
+    "sourceId": 2
+  }]
+}]
