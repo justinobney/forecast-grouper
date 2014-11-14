@@ -25,7 +25,7 @@ gulp.task('istanbul', function (cb) {
       gulp.src(paths.tests)
         .pipe(plugins.plumber())
         .pipe(plugins.mocha())
-        .pipe(plugins.istanbul.writeReports()) // Creating the reports after tests runned
+        // .pipe(plugins.istanbul.writeReports()) // Creating the reports after tests runned
         .on('finish', function() {
           process.chdir(__dirname);
           cb();
@@ -40,7 +40,7 @@ gulp.task('simple-test', function (cb) {
 });
 
 gulp.task('bump', ['test'], function () {
-  var bumpType = plugins.util.env.type || 'patch'; // major.minor.patch
+  var bumpType = plugins.util.env.type || 'minor'; // major.minor.patch
 
   return gulp.src(['./package.json'])
     .pipe(plugins.bump({ type: bumpType }))
