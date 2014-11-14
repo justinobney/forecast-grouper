@@ -1,8 +1,18 @@
 # pocketchange.forecast-grouper 
 
-This will produce the forecast from the projected credit/debit dates
+Given a collection of objects like such:
 
+```javascript
+[{
+  "date": "8-14-2014",
+  "type": "credit",
+  "title": "salary",
+  "amount": 1000.00
+}]
+```
 
+It should group all debits by the closest credit date that is on or before
+the debit's date.
 
 ## Usage
 
@@ -18,7 +28,9 @@ _(Coming soon)_
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [gulp](http://gulpjs.com/).
+In lieu of a formal styleguide, take care to maintain the existing coding style. 
+Add unit tests for any new or changed functionality. Lint and test your code 
+using [gulp](http://gulpjs.com/).
 
 
 ## Release History
