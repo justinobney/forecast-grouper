@@ -5,7 +5,7 @@ Given a collection of objects like such:
 ```javascript
 [{
   "date": "8-14-2014",
-  "type": "credit",
+  "type": "credit", // "debit"
   "title": "salary",
   "amount": 1000.00
 }]
