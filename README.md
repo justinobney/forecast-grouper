@@ -18,7 +18,7 @@ the debit's date.
 
 ```javascript
 var forecastGrouper = require('forecast-grouper');
-forecastGrouper.build(/* journal*/); // "awesome"
+forecastGrouper(/* journal*/); // "awesome"
 ```
 
 ## API
